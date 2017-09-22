@@ -2,7 +2,7 @@
 before_script:
   -npm install; npm install -g gulp
 # tests
-script: gulpt test
+script: 
 # specify language
 language: node_js
 # define our environment
