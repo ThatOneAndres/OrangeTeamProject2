@@ -1,8 +1,8 @@
 # runs before any of the code runs
 before_script:
-  -npm install; npm install -g gulp
+  -npm install;
 # tests
-script: 
+script:
 # specify language
 language: node_js
 # define our environment
