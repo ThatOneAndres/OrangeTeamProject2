@@ -1,6 +1,6 @@
 # runs before any of the code runs
 before_script:
-  -npm install;
+  - npm install;
 # tests
 script:
 # specify language
