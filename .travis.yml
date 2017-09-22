@@ -1,0 +1,14 @@
+# runs before any of the code runs
+before_script:
+  -npm install; npm install -g gulp
+# tests
+script: gulpt test
+# specify language
+language: node_js
+# define our environment
+env:
+  - PORT=7777
+node_js:
+  - "5.1"
+  - "4"
+  - "0.12"
