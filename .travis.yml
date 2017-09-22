@@ -2,7 +2,7 @@
 before_script:
   - npm install;
 # tests
-script:
+#script:
 # specify language
 language: node_js
 # define our environment
