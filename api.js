@@ -66,26 +66,25 @@ function constructURL(paramObject){
 // console.log("obj4: ",constructURL(obj4));
 
 var array1 = ["a","b","c","d"];
-var allFoods = [];
-
-var sizeNCombination = function(storeCombinations,foodArray, size){
-	if (size === 0){
-        allFoods.push(storeCombinations);
-		return;
-	}else{
-		for (var i = 0; i < foodArray.length; i++){
-            var temp = storeCombinations.slice();
-            temp.push(foodArray[i]);
-            var newSize = size-1;
-			sizeNCombination(temp,foodArray.slice(i+1),newSize);
-		}
-	}
-}
 
 var foodCombinations = function(foodArray){
+    var allFoods = [];
+    var sizeNCombination = function(storeCombinations,foodArray, size){
+        if (size === 0){
+            allFoods.push(storeCombinations);
+            return;
+        }else{
+            for (var i = 0; i < foodArray.length; i++){
+                var temp = storeCombinations.slice();
+                temp.push(foodArray[i]);
+                var newSize = size-1;
+                sizeNCombination(temp,foodArray.slice(i+1),newSize);
+            }
+        }
+    }
     for (let i = foodArray.length; i > 0; i--){
         sizeNCombination([],foodArray, i)
     }
+    return allFoods;
 }
-foodCombinations(array1);
-console.log(allFoods);
+console.log(foodCombinations(array1));
