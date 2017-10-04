@@ -15,9 +15,6 @@ module.exports = function(app) {
   // Registers new user into DataBase
   app.post("/api/registeruser", function(req, res) {
     // Add sequelize code to find all posts, and return them to the user with res.json
-    console.log(req)
-    console.log(req.body.username);
-    console.log(req.body.password)
     db.users.create({
       username: req.body.username,
       password: req.body.password,
@@ -27,15 +24,18 @@ module.exports = function(app) {
   });
 
   // Validates if user auth is valid
-  app.post("/api/registeruser", function(req, res) {
+  app.post("/api/validateuser", function(req, res) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.users.findAll({where: {
       username: req.body.username,
       password: req.body.password
     }}).then((result) => {
-      res.json (result);
-      console.log(result)
+      if (result.length === 0) {
+        res.send("INVALID LOGIN")
+      } else {
+        res.send("SUCCESS")
+      }
     })
   });
 }

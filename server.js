@@ -9,9 +9,9 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 app.use(express.static('public'));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: false}));
-
+// app.bodyParser({strict:false});
 
 //add login route
 // Routes
