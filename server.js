@@ -17,7 +17,11 @@ app.use(bodyParser.urlencoded({ extended: false}));
 // Routes
 // =============================================================
 require("./routes/login-api-route.js")(app);
+
 require("./routes/favorites-api-routes.js")(app);
+
+require("./routes/recipe-api-route.js")(app);
+
 
 
 db.sequelize.sync({ force: true }).then(function() {
