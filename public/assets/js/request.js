@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
       console.log( foods);
 
-       $.ajax({url: "api/recipesearch",
+       $.ajax({url: "api/recipesearch/",
                type: "POST",
                success: function(result){
                  console.log(result);
