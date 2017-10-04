@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
       console.log( foods);
 
-       $.ajax({url: "localhost:3000/api/recipesearch",
+       $.ajax({url: "api/recipesearch",
                success: function(result){
                  console.log(result);
 
