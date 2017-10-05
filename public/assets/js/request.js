@@ -21,7 +21,7 @@ $(document).ready(function(){
              console.log(result);
 
              for(var i = 0; i < result.length; i++){
-               var card = '<div class="col-md-4 col-sm-6 item"><div class="card"><h4 class="text-center">';
+               var card = '<div class="col-md-3 col-sm-5 item"><div class="card"><h4 class="text-center">';
 
                card += result[i].recipe.label;
 
