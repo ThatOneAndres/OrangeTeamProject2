@@ -20,24 +20,54 @@
 </head>
 
 <body>
+  <div>
+    <nav class="navbar navbar-default navigation-clean">
+      <div class="container">
+        <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">RESOURCEFOODS</a>
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li role="presentation"><a href="recipesearch.html">FIND RECIPES</a></li>
+            <li role="presentation"><a href="#">HOW IT WORKS</a></li>
+            <li role="presentation"><a href="login.html">LOGIN </a></li>
+            <li role="presentation"><a href="signup.html">SIGN UP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-
-  <div class="container">
-    <h1>Recipe Search</h1>
+<!-- <div>
+  <h1>
+    What is ingridents would you like to cook with?</h1>
+  <p>Select 3 items to start your recipe search</p>
+</div> -->
+  <div class="container-fluid">
+    <!-- <h1>Recipe Search</h1> -->
     <div class="row">
-      <div class="col">
+      <div class="col-3-sm col-md-3">
+          <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">What ingridents would you like to cook with?</h3>
+                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                <p class="card-text">Select or Add 3 items to start your recipe search</p>
+                <button>Add Items</button>
+                <button>Choose From Categories</button>
+              </div>
+            </div>
         <div id="accordion" role="tablist">
           <form action="">
             <div class="card">
               <div class="card-header" role="tab" id="headingOne">
                 <h5 class="mb-0">
-                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     Vegetables
                   </a>
                 </h5>
               </div>
 
-              <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
                   <div class="form-check">
                     <label class="form-check-label">
@@ -330,89 +360,88 @@
               </div>
             </div>
           </form>
-          <button> Submit</button>
-
+          <button> SEARCH</button>
+        </div>
+      </div>
+      <div class="col-sm-9 off-set-sm-3 col-md-9">
+        <div class="features-boxed">
+          <div class="container">
+            <div class="intro">
+              <h2 class="text-center">Recipe Results</h2>
+            </div>
+            <div class="row features">
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-map-marker icon"></i>
+                  <h3 class="name">Works everywhere</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-time icon"></i>
+                  <h3 class="name">Always available</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-list-alt icon"></i>
+                  <h3 class="name">Customizable </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-leaf icon"></i>
+                  <h3 class="name">Organic </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-plane icon"></i>
+                  <h3 class="name">Fast </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-phone icon"></i>
+                  <h3 class="name">Mobile-first</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+            </div>
+            <div class="row features">
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-map-marker icon"></i>
+                  <h3 class="name">Works everywhere</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-time icon"></i>
+                  <h3 class="name">Always available</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-list-alt icon"></i>
+                  <h3 class="name">Customizable </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-leaf icon"></i>
+                  <h3 class="name">Organic </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-plane icon"></i>
+                  <h3 class="name">Fast </h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+              <div class="col-md-4 col-sm-6 item">
+                <div class="box"><i class="glyphicon glyphicon-phone icon"></i>
+                  <h3 class="name">Mobile-first</h3>
+                  <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col">
+      <!-- <div class="col">
         Results
-        <div id="results">
+        <div id="results"> -->
 
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="features-boxed">
-    <div class="container">
-      <div class="intro">
-        <h2 class="text-center">RECIPES </h2>
-        <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
-      </div>
-      <div class="row features">
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-map-marker icon"></i>
-            <h3 class="name">Works everywhere</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-time icon"></i>
-            <h3 class="name">Always available</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-list-alt icon"></i>
-            <h3 class="name">Customizable </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-leaf icon"></i>
-            <h3 class="name">Organic </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-plane icon"></i>
-            <h3 class="name">Fast </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-phone icon"></i>
-            <h3 class="name">Mobile-first</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-      </div>
-      <div class="row features">
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-map-marker icon"></i>
-            <h3 class="name">Works everywhere</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-time icon"></i>
-            <h3 class="name">Always available</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-list-alt icon"></i>
-            <h3 class="name">Customizable </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-leaf icon"></i>
-            <h3 class="name">Organic </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-plane icon"></i>
-            <h3 class="name">Fast </h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-        <div class="col-md-4 col-sm-6 item">
-          <div class="box"><i class="glyphicon glyphicon-phone icon"></i>
-            <h3 class="name">Mobile-first</h3>
-            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p><a href="#" class="learn-more">Learn more »</a></div>
-        </div>
-      </div>
+      
     </div>
   </div>
 
