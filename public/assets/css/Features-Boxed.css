@@ -1,6 +1,6 @@
 .features-boxed {
   color:#313437;
-  background-color:#eef4f7;
+  background-color:#fff;
 }
 
 .features-boxed p {
@@ -44,6 +44,7 @@
   text-align:center;
   padding:30px;
   background-color:#fff;
+  border: 5px solid #000000;
   margin-bottom:30px;
 }
 
