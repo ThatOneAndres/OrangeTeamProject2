@@ -14,10 +14,13 @@ var saltRounds = 10;
 // =============================================================
 module.exports = function(app) {
 
+  app.get('/home', function(req,res){
+    res.render('home', {title: "PROFILE PAGE"})
+  });
+
   app.get('/register', function(req, res){
     res.render('register', {title: "Register Here"});
   });
-
 
   app.post('/register', function(req, res){
 
