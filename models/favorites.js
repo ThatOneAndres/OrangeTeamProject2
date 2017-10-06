@@ -18,5 +18,12 @@ module.exports = function (sequelize, DataTypes) {
       		}
 		}
 	});
+
+	favorites.belongsTo(models.users, {
+		foreignKey: {
+		  allowNull: false
+		}
+	  });
+
 	return favorites;
 }
