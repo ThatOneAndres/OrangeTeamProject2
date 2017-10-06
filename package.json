@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/LuisMiguelRodriguez/OrangeTeamProject2#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.15.4"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql2": "^1.3.6",
+    "request": "^2.83.0",
+    "sequelize": "^4.3.1"
   }
 }
