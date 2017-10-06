@@ -4,6 +4,7 @@
 
 var db = require("../models");
 var expressValidator = require('express-validator');
+var passport = require('passport');
 
 // Used to hash our passwords to our database for security
 var bcrypt = require('bcrypt');
@@ -63,17 +64,27 @@ module.exports = function(app) {
           password: hash,
           email: email
         }).then((result) => {
-          console.log(result);
-          res.render('register', {title: 'You have been registered'} );
+          var user_id = result.id;
+
+          req.login(user_id, function(err){
+            if (err) throw err;
+            res.redirect('/');
+          });
         });
 
       });
 
-
-
     }
 
-
   });
+
+  passport.serializeUser(function(user_id, done) {
+    done(null, user_id);
+  });
+
+  passport.deserializeUser(function(user_id, done) {
+      done(null,user_id);
+  });
+
 
 }
