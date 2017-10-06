@@ -23,6 +23,10 @@ module.exports = function(app) {
     res.render('register', {title: "Register Here"});
   });
 
+  app.get('/profile', authenticationMiddleware() , function(req, res){
+    res.render('dashboard');
+  })
+
   app.post('/register', function(req, res){
 
     //Validation check with Middleware
@@ -85,6 +89,15 @@ module.exports = function(app) {
   passport.deserializeUser(function(user_id, done) {
       done(null,user_id);
   });
+
+  function authenticationMiddleware () {
+  	return (req, res, next) => {
+  		console.log(`req.session.passport.user: ${JSON.stringify(req.session.passport)}`);
+
+  	    if (req.isAuthenticated()) return next();
+  	    res.redirect('/login')
+	}
+}
 
 
 }

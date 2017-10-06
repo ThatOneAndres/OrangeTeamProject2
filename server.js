@@ -9,6 +9,7 @@ var expressValidator = require('express-validator');
 //Authenticaion Packages
 var session = require('express-session');
 var passport = require('passport');
+var MySQLStore = require('express-mysql-session')(session);
 
 
 // Requiring our models for syncing
@@ -23,10 +24,22 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(expressValidator());//this line must be after bodyparser middleware
 app.use(cookieParser());
 
+
+var options = {
+  host: 'localhost',
+  user: 'root',
+  password:'root',
+  database: 'resourcefoods_db'
+};
+
+
+var sessionStore = new MySQLStore(options);
+
 app.use(session({
   //
   secret: 'ilikecookies',
   resave: false,
+  store: sessionStore,
   //will only create a cookie when a user is log in
   saveUninitialized: false
   // cookie: { secure: true }
