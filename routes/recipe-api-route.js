@@ -9,13 +9,13 @@ function constructURL(paramObject){
         var queryURL = "http://api.edamam.com/search?app_id=424a8caa&app_key=8a5f2c782654123ddad8e6b7d7073ef1&q=";
         var foods = paramObject.foods.toString();
         queryURL += foods;
-        var calories = parseInt(paramObject.calories)
-        if (calories){
-            if(typeof calories !== "number"){
-                throw "calorie needs to be an integer";
-            }else{
+        if (paramObject.calories){
+            var calories = parseInt(paramObject.calories);
+            if(calories){
                 queryURL += "&calories=";
                 queryURL += "lte " + calories;
+            }else{
+                throw "calorie needs to be an integer";
             }
         }
         if (paramObject.health){
@@ -26,13 +26,14 @@ function constructURL(paramObject){
                 queryURL += paramObject.health;
             }
         }
-        var recipeCount = parseInt(paramObject.recipeCount);
-        if (recipeCount){
-            if (typeof recipeCount !== "number"){
-                throw "recipeCount needs to be an integer";
-            }else{
+
+        if (paramObject.recipeCount){
+            var recipeCount = parseInt(paramObject.recipeCount);
+            if (recipeCount){
                 queryURL += "&to=";
                 queryURL += recipeCount;
+            }else{
+                throw "recipeCount needs to be an integer";
             }
         }
         return queryURL;
