@@ -1,7 +1,16 @@
 <div class="register-photo">
     <div class="form-container">
         <form method="post" action="/register">
-            <h2 class="text-center"><strong>Create</strong> an account.</h2>
+            <h2 class="text-center">{{title}}</h2>
+
+            {{#if errors}}
+              {{#each errors}}
+                <div class="alert alert-danger">
+                  {{this.msg}}
+                </div>
+              {{/each}}
+            {{/if}}
+
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name"placeholder="John Doe">
@@ -15,8 +24,8 @@
                 <input class="form-control" type="password" name="password" placeholder="Password">
             </div>
             <div class="form-group">
-                <label for="passwordmatch">Re-Enter Password</label>
-                <input class="form-control" type="password" name="passwordmatch" placeholder="Re-Enter Password">
+                <label for="passwordMatch">Re-Enter Password</label>
+                <input class="form-control" type="password" name="passwordMatch" placeholder="Re-Enter Password">
             </div>
             <div class="form-group">
                     <label for="birthdate">Birth Date</label>
