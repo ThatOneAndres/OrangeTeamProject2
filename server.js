@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 // =============================================================
 require("./routes/login-api-route.js")(app);
 require("./routes/favorites-api-routes.js")(app);
-
+require("./routes/history-api-routes.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
 
