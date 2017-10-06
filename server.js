@@ -26,6 +26,9 @@ app.set("view engine", "handlebars");
 require("./routes/login-api-route.js")(app);
 
 require("./routes/favorites-api-routes.js")(app);
+<<<<<<< HEAD
+require("./routes/history-api-routes.js")(app);
+=======
 
 require("./routes/recipe-api-route.js")(app);
 
@@ -44,6 +47,7 @@ app.get('/recipeSearch', function(req, res){
        }
    });
 });
+>>>>>>> 99c5ded5f295827d40f34cc09a132dbb426ad267
 
 db.sequelize.sync({ force: true }).then(function() {
 
