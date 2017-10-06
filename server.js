@@ -29,6 +29,9 @@ require("./routes/favorites-api-routes.js")(app);
 
 require("./routes/recipe-api-route.js")(app);
 
+//
+// page routes
+//
 app.get('/', function(req, res){
 
   res.render('index',{ whichPartial: function() {
@@ -51,6 +54,23 @@ app.get('/login', function(req, res) {
 
 app.get('/signup', function(req, res){
   res.render('signup');
+});
+
+var db = require("./models");
+
+app.post('/register', function(req, res){
+  var name     = req.body.name;
+  var email    = req.body.email;
+  var password = req.body.password;
+  console.log(name);
+  db.usertwos.create({
+    username: name,
+    password: password
+  }).then((result) => {
+    console.log(result);
+    res.render('login');
+  });
+
 });
 
 db.sequelize.sync({ force: true }).then(function() {
