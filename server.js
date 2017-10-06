@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var PORT = process.env.PORT || 3000;
+// A middle to validator form entries
 var expressValidator = require('express-validator');
 
 // Requiring our models for syncing
