@@ -8,17 +8,46 @@ var db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/json" }));
-app.use(bodyParser.urlencoded({ extended: false}));
-// app.bodyParser({strict:false});
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 
 //add login route
 // Routes
 // =============================================================
 require("./routes/login-api-route.js")(app);
+
 require("./routes/favorites-api-routes.js")(app);
+<<<<<<< HEAD
 require("./routes/history-api-routes.js")(app);
+=======
+
+require("./routes/recipe-api-route.js")(app);
+
+app.get('/', function(req, res){
+
+  res.render('index',{ whichPartial: function() {
+             return "main";
+       }
+   });
+});
+
+app.get('/recipeSearch', function(req, res){
+  res.render('index',{
+       whichPartial: function() {
+             return "recipeSearch";
+       }
+   });
+});
+>>>>>>> 99c5ded5f295827d40f34cc09a132dbb426ad267
 
 db.sequelize.sync({ force: true }).then(function() {
 
@@ -28,4 +57,3 @@ db.sequelize.sync({ force: true }).then(function() {
 app.listen(PORT, function(){
   console.log("Listening on port: " + PORT);
 });
-
