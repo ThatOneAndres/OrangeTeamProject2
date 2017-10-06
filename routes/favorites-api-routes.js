@@ -18,6 +18,8 @@ module.exports = function(app) {
     db.favorites.create({
       username: req.body.username,
       item: req.body.item,
+      image_url: req.body.image_url,
+      recipe_url: req.body.recipe_url
     }).then((result) => {
       res.json(result);
     })
