@@ -96,6 +96,8 @@ require("./routes/login-api-route.js")(app);
 
 require("./routes/favorites-api-routes.js")(app);
 
+require("./routes/history-api-routes.js")(app);
+
 require("./routes/recipe-api-route.js")(app);
 
 require("./routes/api-registration")(app);
@@ -103,6 +105,7 @@ require("./routes/api-registration")(app);
 require("./routes/page-routes")(app);
 
 require("./routes/login-routes")(app);
+
 
 
 
