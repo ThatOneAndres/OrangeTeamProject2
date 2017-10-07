@@ -6,9 +6,12 @@ var PORT = process.env.PORT || 3000;
 // A middle to validator form entries
 var expressValidator = require('express-validator');
 
+var bcrypt = require('bcrypt');
+
 //Authenticaion Packages
 var session = require('express-session');
 var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var MySQLStore = require('express-mysql-session')(session);
 
 
@@ -47,6 +50,46 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+
+    console.log(username);
+    console.log(password);
+    db.usertwos.findOne({ where: {username: username} }).then(user => {
+      console.log('Users LOGIN INFO################');
+      console.log(user.dataValues.password);
+
+
+      if(user){
+        var hash = user.dataValues.password
+        var id = user.dataValues.id
+        bcrypt.compare(password, hash, function(err,response){
+
+          if(response === true){
+            return done(null, {user_id: id});
+          } else {
+            return done(null, false);
+          }
+
+        });
+
+
+      } else {
+        done(user);
+      }
+      // project will be the first entry of the Projects table with the title 'aProject' || null
+    });
+    //
+    // db.userstwos.findAll({
+    //   where:{
+    //     username: username
+    //   }
+    // })
+
+
+  }
+));
 
 
 // Set Handlebars.
@@ -90,6 +133,20 @@ app.get('/recipeSearch', function(req, res){
 
 app.get('/login', function(req, res) {
   res.render('login');
+});
+
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/profile',
+  failureRedirect: '/home'
+}));
+
+app.get('/logout', function(req, res){
+  //removes from client broswer cookies
+  req.logout();
+  //removes us from the database
+  req.session.destroy();
+  res.redirect('/');
+
 });
 
 
