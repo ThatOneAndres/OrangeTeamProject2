@@ -1,7 +1,18 @@
-<div class="container-fluid">
-  <!-- <h1>Recipe Search</h1> -->
-  <div class="row">
-    <div class="col-3-sm col-md-3">
+  <div class="container">
+    <div class="row">
+      <div class="input-group col-md-8 off-set-md-4">
+        <input class="searchTerm" type="hidden" name="search_param" value="all" id="searchRecipe">         
+        <input type="text" class="form-control" name="x" placeholder="Search term...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" id="searchRecipeButton"></span></button>
+        </span>
+    </div>
+   </div>
+  </div>
+{{!-- <div class="container-fluid">
+  <h1>Recipe Search</h1>
+  <div class="row"> --}}
+    {{!-- <div class="col-3-sm col-md-3">
         <div class="card">
           <div class="card-block">
             <h3 class="card-title">What ingredients would you like to cook with?</h3>
@@ -317,8 +328,8 @@
         </form>
         <button> SEARCH</button>
       </div>
-    </div>
-    <div class="col-sm-9 off-set-sm-3 col-md-9">
+    </div> --}}
+    {{!-- <div class="col-sm-9 off-set-sm-3 col-md-9">
       <div class="features-boxed">
         <div class="container">
           <div class="intro">
@@ -395,7 +406,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <!-- <div class="col">
       Results
