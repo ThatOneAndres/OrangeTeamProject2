@@ -4,15 +4,66 @@
 }
 
 /* Homepage */
+/* Nav */
+.navbar {
+  margin-bottom:0;
+  border:none;
+}
+
+.navbar-brand .glyphicon {
+  margin-right:6px;
+}
 /* Header */
 .hero {
     background:url(../../assets/img/kitchen.jpg) no-repeat center;
     background-size:cover;
+    position: relative;
     border:none;
-    /* opacity: 0.5;
-    filter: alpha(opacity=50) */
     margin-bottom: 0px;
+    z-index: -10;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(20, 20, 20, .5);
+    z-index: -9 /*Moved one position above the -10 */
+  }
+  .para{
+    color: #fff;
+  
+  }
+@media (min-width:992px) {
+  .hero .get-it {
+    text-align:right;
+    margin-top:30px;
+    padding-right:30px;
+  }
+}
+  
+@media (max-width:992px) {
+  .hero .get-it {
+    text-align:center;
+  }
+}
+  
+.hero .get-it h1{
+  color: #fff;
+  margin-bottom:40px;
+  font-weight: 600;
+}
+  
+  /* .hero .get-it .btn {
+    margin-left:10px;
+    margin-bottom:10px;
+    text-shadow:none;
+  } */
 /* Feature Section */
 .description {
     font-size:18px;
@@ -79,4 +130,31 @@
 
 
   /* LOGIN */
-  
+
+  /* Dashboard */
+
+  nav.vertical-nav {
+    padding: 0;
+  }
+
+  .vertical-nav  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  .vertical-nav ul li{
+    display:block;
+    height: 30px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .vertical-nav ul li a {
+    text-align: center;
+  }
+
+  .vertical-nav ul li a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+  }

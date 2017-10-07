@@ -1,45 +1,4 @@
-.navbar {
-  margin-bottom:0;
-  border:none;
-}
 
-.navbar-brand .glyphicon {
-  margin-right:6px;
-}
-
-
-
-@media (min-width:992px) {
-  .hero .get-it {
-    text-align:right;
-    margin-top:80px;
-    padding-right:30px;
-  }
-}
-
-@media (max-width:992px) {
-  .hero .get-it {
-    text-align:center;
-  }
-}
-
-@media (max-width:992px) {
-  .hero .phone-preview {
-    text-align:center;
-  }
-}
-
-.hero .get-it h1{
-  color: #3FB5C5;
-  margin-bottom:40px;
-  font-weight: 600;
-}
-
-.hero .get-it .btn {
-  margin-left:10px;
-  margin-bottom:10px;
-  text-shadow:none;
-}
 
 div.iphone-mockup {
   position:relative;
