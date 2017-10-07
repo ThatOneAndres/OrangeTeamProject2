@@ -27,14 +27,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(expressValidator());//this line must be after bodyparser middleware
 app.use(cookieParser());
 
-
 var options = {
   host: 'localhost',
   user: 'root',
   password:'root',
   database: 'resourcefoods_db'
 };
-
 
 var sessionStore = new MySQLStore(options);
 
@@ -60,11 +58,9 @@ app.use(function(req, res, next){
 passport.use(new LocalStrategy(
   function(username, password, done) {
 
-
     db.usertwos.findOne({ where: {username: username} }).then(user => {
       console.log('Users LOGIN INFO################');
       console.log(user.dataValues.password);
-
 
       if(user){
         var hash = user.dataValues.password
@@ -79,23 +75,19 @@ passport.use(new LocalStrategy(
 
         });
 
-
       } else {
         done(user);
       }
 
     });
-
   }
 ));
-
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-
 
 //add login route
 // Routes
@@ -107,45 +99,11 @@ require("./routes/favorites-api-routes.js")(app);
 require("./routes/recipe-api-route.js")(app);
 
 require("./routes/api-registration")(app);
-//
-// page routes
-//
-app.get('/', function(req, res){
-  console.log(req.user);
-  console.log(req.isAuthenticated());
 
-  res.render('index',{ whichPartial: function() {
-             return "main";
-       }
-   });
+require("./routes/page-routes")(app);
 
-});
+require("./routes/login-routes")(app);
 
-app.get('/recipeSearch', function(req, res){
-  res.render('index',{
-       whichPartial: function() {
-             return "recipeSearch";
-       }
-   });
-});
-
-app.get('/login', function(req, res) {
-  res.render('login');
-});
-
-app.post('/login', passport.authenticate('local', {
-  successRedirect: '/profile',
-  failureRedirect: '/home'
-}));
-
-app.get('/logout', function(req, res){
-  //removes from client broswer cookies
-  req.logout();
-  //removes us from the database
-  req.session.destroy();
-  res.redirect('/');
-
-});
 
 
 db.sequelize.sync({ force: true }).then(function() {
