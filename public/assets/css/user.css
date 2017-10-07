@@ -7,11 +7,7 @@
   margin-right:6px;
 }
 
-.hero {
-  background:url(../../assets/img/city_bg.jpg) no-repeat center;
-  background-size:cover;
-  border:none;
-}
+
 
 @media (min-width:992px) {
   .hero .get-it {
@@ -33,10 +29,10 @@
   }
 }
 
-.hero .get-it h1, .hero .get-it p {
-  color:#fff;
-  text-shadow:2px 2px 3px rgba(0,0,0,0.3);
+.hero .get-it h1{
+  color: #3FB5C5;
   margin-bottom:40px;
+  font-weight: 600;
 }
 
 .hero .get-it .btn {
@@ -57,48 +53,17 @@ div.iphone-mockup {
   height:auto;
 }
 
-.iphone-mockup .screen {
-  position:absolute;
-  width:88%;
-  height:77%;
-  top:12%;
-  border-radius:2px;
-  left:6%;
-  border:1px solid #444;
-  background-color:#aaa;
-  overflow:hidden;
-  background:url(../../assets/img/screen-content-iphone-6.jpg);
-  background-size:cover;
-  background-position:center;
-}
-
-.iphone-mockup .screen:before {
-  content:'';
-  background-color:#fff;
-  position:absolute;
-  width:70%;
-  height:140%;
-  top:-12%;
-  right:-60%;
-  transform:rotate(-19deg);
-  opacity:0.2;
-}
-
 .icon-feature {
   text-align:center;
 }
 
 .icon-feature .glyphicon {
-  font-size:60px;
+  font-size:35px;
 }
 
 section.features {
   background-color:#369;
   padding:40px 0;
-  color:#fff;
-}
-
-.features h2 {
   color:#fff;
 }
 
@@ -126,27 +91,9 @@ section.testimonials {
 }
 
 .site-footer h5 {
-  color:inherit;
+  color:#3FB5C5;
   font-size:20px;
-}
-
-.site-footer .social-icons a:hover {
-  opacity:1;
-}
-
-.site-footer .social-icons a {
-  display:inline-block;
-  width:32px;
-  border:none;
-  font-size:20px;
-  border-radius:50%;
-  margin:4px;
-  color:#fff;
-  text-align:center;
-  background-color:#798FA5;
-  height:32px;
-  opacity:0.8;
-  line-height:32px;
+  font-weight: 600;
 }
 
 @media (min-width:768px) {
