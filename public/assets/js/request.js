@@ -55,7 +55,7 @@ $(document).ready(function(){
                 src: recipeItem.image,
                 alt: recipeItem.label,
                 class: "card-img-top",
-                style: "width:300px;height:300px;text-align:center;border-radius:3px"
+                style: "width:200px;height:200px;text-align:center;border-radius:3px"
               })
 
               cardBlock.attr({
