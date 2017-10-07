@@ -1,6 +1,6 @@
 // Dependency
 var request = require("request");
-// var history = request("../models");
+var db = require("../models");
 
 
 // function to construct URL passed for API
@@ -51,10 +51,12 @@ module.exports = function(app){
     app.post("/api/recipesearch", function(req, res){
         try{
             var queryUrl = constructURL(req.body);
-            // history.users.create({
-            //     username: req.body.username,
-            //     item: req.body.foods.toString(),
-            //   });
+            db.history.create({
+                username: req.body.username,
+                item: req.body.foods.toString(),
+              }).then((result) => {
+                console.log(result);
+              });
             request(queryUrl, function (error, response, body) {
                 if (error) {console.log('error:', error);} // Print the error if one occurred
                 console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
