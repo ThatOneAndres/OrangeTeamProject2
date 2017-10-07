@@ -19,11 +19,15 @@ module.exports = function (sequelize, DataTypes) {
 		}
 	});
 
-	favorites.belongsTo(models.users, {
-		foreignKey: {
-		  allowNull: false
-		}
-	  });
+    favorites.associate = function(models) {
+        // We're saying that a favorites should belong to an Author
+        // A favorites can't be created without an Author due to the foreign key constraint
+        favorites.belongsTo(models.users, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+    };
 
 	return favorites;
 }
