@@ -16,6 +16,20 @@ module.exports = function (sequelize, DataTypes) {
       		validate: {
         		len: [1]
       		}
+		},
+		image_url: {
+			type: DataTypes.STRING,
+      		allowNull: false,
+      		validate: {
+        		len: [1]
+      		}
+		},
+		recipe_url: {
+			type: DataTypes.STRING,
+      		allowNull: false,
+      		validate: {
+        		len: [1]
+      		}
 		}
 	});
 	return favorites;
