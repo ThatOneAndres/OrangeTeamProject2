@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
     $("#searchRecipeButton").click(function(){
+      event.preventDefault();
+      
         var foods = {
           foods : [],
           health : "peanut-free",
