@@ -51,11 +51,16 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(function(req, res, next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
+
+//Login Authenication
 passport.use(new LocalStrategy(
   function(username, password, done) {
 
-    console.log(username);
-    console.log(password);
+
     db.usertwos.findOne({ where: {username: username} }).then(user => {
       console.log('Users LOGIN INFO################');
       console.log(user.dataValues.password);
@@ -78,15 +83,8 @@ passport.use(new LocalStrategy(
       } else {
         done(user);
       }
-      // project will be the first entry of the Projects table with the title 'aProject' || null
-    });
-    //
-    // db.userstwos.findAll({
-    //   where:{
-    //     username: username
-    //   }
-    // })
 
+    });
 
   }
 ));
