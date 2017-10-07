@@ -170,3 +170,9 @@
   }
 }
 
+
+.side-nav{
+  display: block;
+  background-color: #3FB5C5;
+  min-height: 500px;
+}
