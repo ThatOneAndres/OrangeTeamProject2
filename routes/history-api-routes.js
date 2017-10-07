@@ -12,28 +12,15 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // Registers new user into DataBase
-  app.post("/api/favorites", function(req, res) {
-    // Add sequelize code to find all posts, and return them to the user with res.json
-    db.favorites.create({
-      username: req.body.username,
-      item: req.body.item,
-      image_url: req.body.image_url,
-      recipe_url: req.body.recipe_url
-    }).then((result) => {
-      res.json(result);
-    })
-  });
-
   // Validates if user auth is valid
-  app.get("/api/favorites/:username", function(req, res) {
+  app.get("/api/history/:username", function(req, res) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
-    db.favorites.findAll({where: {
+    db.history.findAll({where: {
       username: req.params.username,
     }}).then((result) => {
       if (result.length === 0) {
-        res.send("NO Favorites")
+        res.send("No History available for user")
       } else {
         res.json(result);
       }

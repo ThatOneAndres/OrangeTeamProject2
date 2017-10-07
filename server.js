@@ -27,6 +27,8 @@ require("./routes/login-api-route.js")(app);
 
 require("./routes/favorites-api-routes.js")(app);
 
+require("./routes/history-api-routes.js")(app);
+
 require("./routes/recipe-api-route.js")(app);
 
 app.get('/', function(req, res){
@@ -44,6 +46,7 @@ app.get('/recipeSearch', function(req, res){
        }
    });
 });
+
 
 db.sequelize.sync({ force: true }).then(function() {
 
