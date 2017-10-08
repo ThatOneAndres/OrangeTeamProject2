@@ -175,14 +175,11 @@
   }
   
   .searchTerm {
-    float: left;
-    width: 100%;
     border: 3px solid #00B4CC;
     padding: 5px;
-    height: 20px;
-    border-radius: 5px;
-    outline: none;
-    color: #9DBFAF;
+    /* height: 20px; */
+    /* border-radius: 5px; */
+    /* color: #9DBFAF; */
   }
   
   .searchTerm:focus{
@@ -190,72 +187,77 @@
   }
   
   .searchButton {
-    position: absolute;  
-    right: -50px;
-    width: 40px;
+    /* position: absolute;   */
+    /* right: -50px; */
+    /* width: 40px;
     height: 36px;
     border: 1px solid #00B4CC;
-    background: #00B4CC;
+    background: linear-gradient(270deg, #00d19b , #00d1bd );
     text-align: center;
-    color: #000;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
-  }
-  
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 30%;
-    /* position: absolute; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  /* Recipe Search */
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-  
-  body{
-    /* background: #f2f2f2; */
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .search {
-    width: 100%;
-    /* position: relative */
-  }
-  
-  .searchTerm {
-    width: 80%;
-    border: 3px solid #00B4CC;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 20px;
-    border-radius: 5px;
-    outline: none;
-    margin-top: 10px;
-  }
-  
-  .searchTerm:focus{
-    color: #000;
-  }
-  
-  .searchRecipeButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 20px; */
   }
   .input-group{
     margin-top: 15px;
   }
+  #searchRecipeButton{
+    color: #fff;
+    /* background: linear-gradient(270deg, #00d19b , #00d1bd ); */
+    background-color: #00B4CC;
+  }
+#searchbox{
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.a {
+  position:absolute;
+  width: 100%;
+  opacity: 0.8;
+}
+#mainHeader{
+}
+/*
+.a::after {
+  content: " ";
+  z-index: -9;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+}*/
+.hero {
+  height: 500px;
+  margin-top: 100px;
+}
+/*#input {
+  postion: relative;
+}
+*/
+#input {
+  background-color: black;
+  opacity: 0.4;
+  border: white 2px solid;
+}
+.inner-addon {
+    position: relative;
+}
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  font-size: 20px;
+  padding: 10px;
+  pointer-events: none;
+  color: black;
+}
+/* align icon */
+.right-addon .glyphicon { right: 0px;}
+/* add padding  */
+.right-addon input { padding-right: 30px; }
 
 
 /* Card stuff */
@@ -304,4 +306,11 @@ hr { margin:1px}
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+.card-img-top{
+  position: absolute;
+  text-align:center;
+  border-radius: 3px;
+  max-width: 100%;
+  height: auto;
 }

@@ -1,5 +1,9 @@
 .navigation-clean {
-  background:#3FB5C5;
+  background: #18d1b2; /* Old Browsers */
+  background: -webkit-linear-gradient(top,#18d1b2,#8fcbac); /*Safari 5.1-6*/
+  background: -o-linear-gradient(top,#18d1b2,#8fcbac); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(top,#18d1b2,#8fcbac); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, #18d1b2, #8fcbac); /*Standard*/
   padding-top:10px;
   padding-bottom:10px;
   color:#fff;
