@@ -204,8 +204,60 @@
   #searchRecipeButton{
     color: #fff;
     /* background: linear-gradient(270deg, #00d19b , #00d1bd ); */
+    background-color: #00B4CC;
   }
+#searchbox{
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.a {
+  position:absolute;
+  width: 100%;
+  opacity: 0.8;
+}
+#mainHeader{
+}
+/*
+.a::after {
+  content: " ";
+  z-index: -9;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+}*/
+.hero {
+  height: 500px;
+  margin-top: 100px;
+}
+/*#input {
+  postion: relative;
+}
+*/
+#input {
+  background-color: black;
+  opacity: 0.4;
+  border: white 2px solid;
+}
+.inner-addon {
+    position: relative;
+}
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  font-size: 20px;
+  padding: 10px;
+  pointer-events: none;
+  color: black;
+}
+/* align icon */
+.right-addon .glyphicon { right: 0px;}
+/* add padding  */
+.right-addon input { padding-right: 30px; }
 
 
 /* Card stuff */
@@ -254,4 +306,11 @@ hr { margin:1px}
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+.card-img-top{
+  position: absolute;
+  text-align:center;
+  border-radius: 3px;
+  max-width: 100%;
+  height: auto;
 }
