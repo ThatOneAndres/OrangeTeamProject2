@@ -1,9 +1,14 @@
 .features-clean {
   color:#313437;
-  background-color:#fff;
   padding-bottom:30px;
 }
-
+/* .gradient-background{
+  background: #36b4ba; /* Old Browsers */
+  background: -webkit-linear-gradient(left,#36b4ba,#852fbf); /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,#36b4ba,#852fbf); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,#36b4ba,#852fbf); /*Fx 3.6-15*/
+  background: linear-gradient(to right, #36b4ba, #852fbf); /*Standard*/
+} */
 
 
 .features-clean p {
