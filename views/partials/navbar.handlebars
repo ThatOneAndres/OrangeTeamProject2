@@ -27,40 +27,42 @@
 <div>
         <nav class="navbar navbar-default navbar-fixed navigation-clean a navbar-fixed-top">
             <div class="container">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="indexHANDLEBARS.html">RESOURCEFOODS</a>
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="/">RESOURCEFOODS</a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only searchIcon">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                   <ul class="nav navbar-nav navbar-right">
                     {{#if isAuthenticated}}
-  
+
                       <li role="presentation"><a href="/search">Search</a></li>
                       <li role="presentation"><a href="/favorites">Favorites</a></li>
                       <li role="presentation"><a href="/profile">Profile</a></li>
                       <li role="presentation"><a href="/profile">Profile</a></li>
                       <li role="presentation"><a href="/logout">Logout</a></li>
                     {{/if}}
-  
+
                     {{#unless isAuthenticated}}
-  
+
                       <li role="presentation"><a href="/recipeSearch">FIND RECIPES</a></li>
                       <li role="presentation"><a href="#">HOW IT WORKS</a></li>
                       <li role="presentation"><a href="/login">LOGIN </a></li>
                       <li role="presentation"><a href="/register">SIGN UP</a></li>
-  
+
                     {{/unless}}
-  
+
                   </ul>
                 </div>
             </div>
             <div class="container ">
               <div class="navbar ">
+
                 <form class=" text-center">
                   <div class="inner-addon right-addon">
                       <i class="glyphicon glyphicon-search"></i>
-                      <input id="input" type="text" class="form-control" />
+                      <input id="searchRecipe" type="text" class="form-control" />
                   </div>
                 </form>
+                <button type="button" id="searchRecipeButton" name="button">TEST SEARCH BUTTON</button>
               </div>
             </div>
         </nav>
