@@ -43,23 +43,25 @@
     padding-right:30px;
   }
 }
-  
+
 @media (max-width:992px) {
   .hero .get-it {
     text-align:center;
   }
 }
-  
+
 .hero .get-it h1{
   color: #000;
   margin-bottom:40px;
   font-weight: 600;
 }
+
 .para{
   color: #000;
 
 }
   
+
   /* .hero .get-it .btn {
     margin-left:10px;
     margin-bottom:10px;
@@ -108,15 +110,15 @@
       padding-top:25px;
       font-size:24px;
     }
-  } 
-  
+  }
+
   @media (max-width:767px) {
     .features-clean .intro {
       margin-bottom:40px;
     }
   }
-  
-  
+
+
   @media (max-width:767px) {
     .features-clean .item {
       min-height:0;
@@ -164,17 +166,17 @@
   }
   /* Recipe Search */
   @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-  
+
   body{
     /* background: #f2f2f2; */
     font-family: 'Open Sans', sans-serif;
   }
-  
+
   .search {
     width: 100%;
     position: relative
   }
-  
+
   .searchTerm {
     border: 3px solid #00B4CC;
     padding: 5px;
@@ -182,11 +184,11 @@
     /* border-radius: 5px; */
     /* color: #9DBFAF; */
   }
-  
+
   .searchTerm:focus{
     color: #00B4CC;
   }
-  
+
   .searchButton {
     /* position: absolute;   */
     /* right: -50px; */
@@ -239,8 +241,10 @@
   postion: relative;
 }
 */
-#input {
-  background: transparent;
+
+#searchRecipe {
+  background-color: black;
+  opacity: 0.4;
   border: white 2px solid;
   color: #000;
   font-size: 18px;
@@ -306,15 +310,18 @@ hr { margin:1px}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-@keyframes cardAnimation { 
+@keyframes cardAnimation {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 .card-img-top{
-  position: absolute;
   text-align:center;
   border-radius: 3px;
   max-width: 100%;
   height: auto;
+}
+
+#results {
+  margin-top:150px;
 }
