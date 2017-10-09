@@ -308,9 +308,12 @@ hr { margin:1px}
     100%{background-position:0% 50%}
 }
 .card-img-top{
-  position: absolute;
   text-align:center;
   border-radius: 3px;
   max-width: 100%;
   height: auto;
+}
+
+#results {
+  margin-top:150px;
 }
