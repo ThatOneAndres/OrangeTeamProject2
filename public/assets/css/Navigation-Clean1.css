@@ -11,7 +11,14 @@
   box-shadow:none;
   border:none;
   margin-bottom:0;
+  height: 100px;
+  font-size: 18px;
 }
+
+/*.navigation-clean .container {
+   margin-top: auto;
+   margin-bottom: auto;
+}*/
 
 @media (max-width:767px) {
   .navigation-clean {
@@ -22,8 +29,8 @@
 
 @media (max-width:767px) {
   .navigation-clean .navbar-header {
-    padding-top:10px;
-    padding-bottom:10px;
+    /*padding-top:20px;*/
+    /*padding-bottom:10px;*/
   }
 }
 
