@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+  
+
     $("#searchRecipeButton").click(function(){
       event.preventDefault();
       
@@ -118,7 +121,29 @@ $(document).ready(function(){
 
           }
         );
-
-
     });
+        // if (user.isAuthenticated){
+        // $.get("/api/history/:username",function(data){
+            
+          data = ["chicken,salsa","cheese,bread"];
+          var searchHistory = $("<a/>");
+          console.log(searchHistory);
+          searchHistory.attr("href","#history");
+          searchHistory.attr("data-toggle", "collapse");
+          searchHistory.text("Search History");
+          var searchList = $("<div class='collapse' id='history'/>");
+          for (let i = 0; i < data.length; i++){
+              var search = $("<div/>");
+              var anch = $("<a class='search-history'/>").text(data[i]);
+              anch.attr("href","#");
+              search.append(anch);
+              searchList.append(search)
+          }
+
+          console.log(searchList);
+          $(".search-form").after(searchList);
+          $(".search-form").after(searchHistory);
+
+      // )}
+  // }
 });
