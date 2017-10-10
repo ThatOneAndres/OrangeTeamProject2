@@ -15,17 +15,26 @@
 }
 /* Header */
 .hero {
-    background:url(../../assets/img/kitchen.jpg) no-repeat center;
+    background:url(../../assets/img/mainimage.jpg) no-repeat center;
     background-size:cover;
     position: relative;
     border:none;
     margin-bottom: 0px;
     z-index: -10;
     background-position: center center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
+    height:800px;
   }
-  .hero::after {
+
+  #heroText {
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -9 ;/*Moved one position above the -10 */
+    height: 300px;
+    width: 600px;
+    border-radius: 5px;
+  }
+  /*.hero::after {
     content: '';
     position: absolute;
     top: 0;
@@ -34,7 +43,7 @@
     bottom: 0;
     background: rgba(255, 255, 255, 0.5);
     z-index: -9 /*Moved one position above the -10 */
-  }
+  }*/
 
 @media (min-width:992px) {
   .hero .get-it {
@@ -69,16 +78,21 @@
   } */
 /* Feature Section */
 .description {
-    font-size:18px;
+    font-size:16px;
     margin-bottom:0;
   }
 
-  .features-clean .item .icon {
-    font-size:40px;
-    color: #3FB5C5;
-    float:left;
-    margin-top:20px;
-    margin-left:-65px;
+  .ontop{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    display: inline block;
+    background:#141414;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    padding-top:20px;
+
   }
 
   .features-clean .item {
@@ -95,12 +109,11 @@
     font-weight:bold;
     margin-bottom:40px;
     padding-top:40px;
-    color:#3FB5C5;
+    color:#141414;
     text-align: center;
-    font-size: 36px;
+    font-size: 40px;
   }
   .name {
-    font-size:24px;
     font-weight: 600;
   }
 
@@ -233,9 +246,7 @@
   right: 0;
   background: rgba(0, 0, 0, 0);
 }*/
-.hero {
-  height: 500px;
-}
+
 /*#input {
   postion: relative;
 }
@@ -326,11 +337,17 @@ hr { margin:1px}
 }
 
 #signupBtn {
-  background-color: black;
+  background-color: white;
   border-radius: 5px;
 }
 
 #logo {
   font-family: 'Special Elite', cursive;
   font-size: 42px;
+}
+
+#howItWorks {
+  background-image: url("/assets/img/indgedients.jpg");
+  background-size: cover;
+  height:400px;
 }
