@@ -61,7 +61,7 @@ function displayRecipes(result){
   
                 fullRecipe.attr({
                   href: recipeItem.url,
-                  class: "btn btn-primary",
+                  class: "btn btn-primary card-btn",
                   target: "_blank"
                 });
   
@@ -181,7 +181,7 @@ $(document).ready(function(){
 
               fullRecipe.attr({
                 href: recipeItem.url,
-                class: "btn btn-primary",
+                class: "btn btn-primary card-btn",
                 target: "_blank"
               });
 
