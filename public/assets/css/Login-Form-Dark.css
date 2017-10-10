@@ -13,7 +13,7 @@
   border-radius:4px;
   transform:translate(-50%, -50%);
   position:absolute;
-  top:50%;
+  top:38%;
   left:50%;
   color:#000;
   box-shadow:3px 3px 4px rgba(0,0,0,0.2);
@@ -23,7 +23,7 @@
   text-align:center;
   padding:15px 0 20px;
   font-size:100px;
-  color:#3FB5C5;
+  color:#000;
 }
 
 .login-dark form .form-control {
@@ -37,7 +37,7 @@
 }
 
 .login-dark form .btn-primary {
-  background:#3FB5C5;
+  background:#000;
   border:none;
   border-radius:4px;
   padding:11px;
@@ -56,7 +56,7 @@
   display:block;
   text-align:center;
   font-size:12px;
-  color:#6f7a85;
+  color:#000;
   opacity:0.9;
   text-decoration:none;
 }
