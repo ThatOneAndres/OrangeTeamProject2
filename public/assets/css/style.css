@@ -221,6 +221,7 @@
     color: #fff;
     /* background: linear-gradient(270deg, #00d19b , #00d1bd ); */
     background-color: #00B4CC;
+
   }
 #searchbox{
   margin-left: auto;
@@ -253,14 +254,21 @@
 */
 
 #searchRecipe {
-  background-color: black;
-  opacity: 0.4;
-  border: white 2px solid;
-  color: #000;
-  font-size: 18px;
-  font-weight: bold;
+    background-color: #fcfcfc;
+    border: black solid 5px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    /* border: black solid 20px; */
+    margin-top: 50px;
+    /* padding: 100px; */
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* min-width: 500px; */
+    height: 50px;
 }
-
 .inner-addon {
     position: relative;
 }
@@ -287,7 +295,7 @@
  -webkit-transition: .25s box-shadow;
  transition: .25s box-shadow;
  margin: 2px 2px 2px 2px*/
-  border: 1px solid black;
+  border: 1px solid #141414;
   box-shadow:1px 3px 8px #3b5998;
   border-radius: 5px;
   padding: 5px;
@@ -337,8 +345,9 @@ hr { margin:1px}
 }
 
 #signupBtn {
-  background-color: white;
+  background-color: #141414;
   border-radius: 5px;
+  color: white;
 }
 
 #logo {
