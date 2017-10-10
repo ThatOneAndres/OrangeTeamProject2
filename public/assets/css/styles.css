@@ -87,10 +87,11 @@
 } */
 
 .login-dark {
-  height:1000px;
+  height:800px;
   background:#475d62 url(../../assets/img/kitchen.jpg);
   background-size:cover;
   position:relative;
+  margin-bottom:-20px;
 }
 
 .login-dark form {
@@ -102,7 +103,7 @@
   -webkit-transform:translate(-50%, -50%);
           transform:translate(-50%, -50%);
   position:absolute;
-  top:38%;
+  top:45%;
   left:50%;
   color:#000;
   -webkit-box-shadow:3px 3px 4px rgba(0,0,0,0.2);
@@ -580,71 +581,6 @@
 
 .navigation-clean-button.navbar-inverse .action-button:hover {
   background:#269d9d;
-}
-
-.projects-horizontal {
-  color:#313437;
-  background-color:#fff;
-}
-
-.projects-horizontal p {
-  color:#7d8285;
-}
-
-.projects-horizontal h2 {
-  font-weight:bold;
-  margin-bottom:40px;
-  padding-top:40px;
-  color:inherit;
-}
-
-@media (max-width:767px) {
-  .projects-horizontal h2 {
-    margin-bottom:25px;
-    padding-top:25px;
-    font-size:24px;
-  }
-}
-
-.projects-horizontal .intro {
-  font-size:16px;
-  max-width:500px;
-  margin:0 auto 10px;
-}
-
-.projects-horizontal .projects {
-  padding-bottom:40px;
-}
-
-.projects-horizontal .item {
-  padding-top:60px;
-  min-height:160px;
-}
-
-@media (max-width:767px) {
-  .projects-horizontal .item {
-    padding-top:40px;
-    min-height:160px;
-  }
-}
-
-.projects-horizontal .item .name {
-  font-size:18px;
-  font-weight:bold;
-  margin-top:10px;
-  margin-bottom:15px;
-  color:inherit;
-}
-
-@media (max-width:991px) {
-  .projects-horizontal .item .name {
-    margin-top:22px;
-  }
-}
-
-.projects-horizontal .item .description {
-  font-size:15px;
-  margin-bottom:0;
 }
 
 .register-photo {
@@ -1173,7 +1109,7 @@ section.testimonials {
 }
 
 .site-footer {
-  padding:20px 0;
+  padding:45px 0;
   text-align:center;
   position: absolute;
   bottom: 0;
