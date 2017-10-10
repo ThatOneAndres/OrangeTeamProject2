@@ -60,7 +60,7 @@ passport.use(new LocalStrategy(
 
     db.usertwos.findOne({ where: {username: username} }).then(user => {
       console.log('Users LOGIN INFO################');
-      console.log(user.dataValues.password);
+      // console.log(user.dataValues.password);
 
       if(user){
         var hash = user.dataValues.password

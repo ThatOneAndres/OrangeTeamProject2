@@ -995,9 +995,6 @@ hr { margin:1px}
 }
 
 .card-img-top{
-  text-align:center;
-  border-radius: 3px;
-  max-width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;

@@ -71,7 +71,7 @@ module.exports = function(app) {
 
           req.login(user_id, function(err){
             if (err) throw err;
-            res.redirect('/');
+            res.render('dashboard');
           });
         });
 
