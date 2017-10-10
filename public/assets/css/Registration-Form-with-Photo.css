@@ -65,6 +65,7 @@
   margin-top:35px;
   text-shadow:none;
   outline:none !important;
+
 }
 
 .register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
@@ -83,4 +84,3 @@
   opacity:0.9;
   text-decoration:none;
 }
-
