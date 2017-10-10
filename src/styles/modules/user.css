@@ -69,6 +69,11 @@ section.testimonials {
   font-weight: 600;
 }
 
+.inline-block {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
 @media (min-width:768px) {
   .site-footer .social-icons {
     text-align:right;

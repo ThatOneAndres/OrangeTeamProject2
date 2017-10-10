@@ -141,7 +141,7 @@
 }
 
 .login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
-  background:#214a80;
+  background:#3fb5c5;
   outline:none;
 }
 
@@ -1129,6 +1129,11 @@ section.testimonials {
   color:black;
   font-size:20px;
   font-weight: 600;
+}
+
+.inline-block {
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 @media (min-width:768px) {
