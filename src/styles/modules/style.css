@@ -201,19 +201,6 @@
   .searchTerm:focus{
     color: #00B4CC;
   }
-
-  .searchButton {
-    /* position: absolute;   */
-    /* right: -50px; */
-    /* width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: linear-gradient(270deg, #00d19b , #00d1bd );
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px; */
-  }
   .input-group{
     margin-top: 15px;
   }
@@ -235,25 +222,6 @@
   width: 100%;
   opacity: 0.8;
 }
-#mainHeader{
-}
-/*
-.a::after {
-  content: " ";
-  z-index: -9;
-  display: block;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0);
-}*/
-
-/*#input {
-  postion: relative;
-}
-*/
 
 #searchRecipe {
     background-color: #fcfcfc;
@@ -261,14 +229,11 @@
     color: black;
     font-size: 18px;
     font-weight: bold;
-    /* border: black solid 20px; */
     margin-top: 50px;
-    /* padding: 100px; */
     width: 60%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* min-width: 500px; */
     height: 50px;
     display: inline;
 }
@@ -283,9 +248,7 @@
   pointer-events: none;
   color: #fff;
 }
-/* align icon */
 .right-addon .glyphicon { right: 0px;}
-/* add padding  */
 .right-addon input { padding-right: 30px; }
 
 
@@ -298,19 +261,11 @@
  -webkit-transition: .25s box-shadow;
  transition: .25s box-shadow;
  margin: 2px 2px 2px 2px*/
-  border: 1px solid #141414;
-  box-shadow:1px 3px 8px #3b5998;
+  border: 5px solid #000;
+  box-shadow:1px 3px 8px #000;
   border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
-  text-align:center;
-  background: white;
-/*  background: linear-gradient(270deg, #00d19b, #00d1bd);
-  background-size: 400% 400%;
-
-  -webkit-animation: cardAnimation 30s ease infinite;
-  -moz-animation: cardAnimation 30s ease infinite;
-  animation: cardAnimation 30s ease infinite;*/
+  margin-bottom: 10px;
+  background: #fff;
 }
 .card:focus, .card:hover {
  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -341,7 +296,22 @@ hr { margin:1px}
   border-radius: 3px;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
+  width: 100%;
 }
+.card-btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+.card-btn:hover, .card-btn:active{
+  background: #3FB5C5;
+  border-color: #3FB5C5;
+}
+
+
 
 #results {
   margin-top:150px;
