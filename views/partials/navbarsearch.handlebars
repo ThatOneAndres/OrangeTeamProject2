@@ -30,11 +30,12 @@
               <div class="navbar ">
 
                 <form class="search-form text-center">
-                  <div class="inner-addon right-addon">
+                  {{!-- <div class="inner-addon right-addon"> --}}
+                  <div id="search-form-div">
 
-                      <i class="glyphicon glyphicon-search"></i>
+                      
                       <input id="searchRecipe" type="text" class="form-control" />
-
+                      <a id="searchRecipeButton" name="button"><i class="glyphicon glyphicon-search"></i></a>
                   </div>
                 </form>
                 {{!-- <a href="#history" data-toggle="collapse">Recently searched </a>
@@ -43,7 +44,7 @@
                   <div><a href="#"> pork, olives </a></div>
                   <div><a href="#"> beef, onions, rice </a></div>
                 </div> --}}
-                <button type="button" id="searchRecipeButton" name="button">TEST SEARCH BUTTON</button>
+                
               </div>
             </div>
         </nav>
