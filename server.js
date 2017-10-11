@@ -14,7 +14,6 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var MySQLStore = require('express-mysql-session')(session);
 
-require('dotenv').config();
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -66,10 +65,11 @@ app.use(function(req, res, next){
 });
 
 //Login Authenication
-passport.use(new LocalStrategy(
-  function(username, password, done) {
 
-    db.usertwos.findOne({ where: {username: username} }).then(user => {
+passport.use(new LocalStrategy(
+  function(email, password, done) {
+
+    db.usertwos.findOne({ where: {email: email} }).then(user => {
       console.log('Users LOGIN INFO################');
       // console.log(user.dataValues.password);
 

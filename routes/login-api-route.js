@@ -28,9 +28,10 @@ module.exports = function(app) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.users.findAll({where: {
-      username: req.body.username,
+      email: req.body.username,
       password: req.body.password
     }}).then((result) => {
+      console.log(result);
       if (result.length === 0) {
         res.send("INVALID LOGIN")
       } else {
