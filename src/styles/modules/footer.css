@@ -41,12 +41,18 @@
 
 #myFooter .myCols{
   text-align: center;
+  background-color: #373a48;
+}
+#myFooter .myColsrow{
+  background-color: #373a48;
+  width: 100%;
 }
 
 #myFooter .social-networks{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 38px;
+  background-color: #373a48;
 }
 
 #myFooter .social-networks a{
@@ -85,26 +91,28 @@
 
 /* CSS used for positioning the footers at the bottom of the page. */
 /* You can remove this. */
-
-
-html{
-  height: 100% !important;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#myFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #373a48;
 }
 
-body{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
-}
 
-.content{
-  flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  min-height: 200px;
-}
 
+
+/**/
 #myFooter{
   flex: 0 0 auto;
     -webkit-flex: 0 0 auto;

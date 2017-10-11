@@ -87,7 +87,7 @@
 }
 
 .login-dark {
-  height:800px;
+  height:802px;
   background:#475d62 url(../../assets/img/kitchen.jpg);
   background-size:cover;
   position:relative;
@@ -783,8 +783,10 @@
     background:#000;
     border-radius: 50%;
     padding-top:20px;
+
     width:80px;
     height:80px;
+
 
   }
 
@@ -939,7 +941,6 @@ body{
     margin-right: auto;
     display: inline;
     margin-top: 45px;
-    width:100%;
 }
 
 .inner-addon {
@@ -1238,12 +1239,19 @@ section.testimonials {
 
 #myFooter .myCols{
   text-align: center;
+  background-color: #373a48;
+}
+
+#myFooter .myColsrow{
+  background-color: #373a48;
+  width: 100%;
 }
 
 #myFooter .social-networks{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 38px;
+  background-color: #373a48;
 }
 
 #myFooter .social-networks a{
@@ -1283,29 +1291,27 @@ section.testimonials {
 
 /* You can remove this. */
 
-html{
-  height: 100% !important;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-body{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: -webkit-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
 
-.content{
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  min-height: 200px;
+#myFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #373a48;
 }
+
+/**/
 
 #myFooter{
   -webkit-box-flex: 0;
