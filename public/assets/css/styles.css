@@ -938,6 +938,8 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: inline;
+    margin-top: 45px;
+    width:100%;
 }
 
 .inner-addon {
@@ -1316,4 +1318,3 @@ body{
     font-size: 25px;
     font-weight: bold;
 }
-
