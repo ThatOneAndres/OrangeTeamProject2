@@ -90,6 +90,8 @@
     background:#141414;
     border-radius: 50px;
     padding-top:20px;
+    width:80px;
+    height:80px;
 
   }
 
@@ -205,11 +207,17 @@
   #searchRecipeButton{
     color: #000;
     /* background: linear-gradient(270deg, #00d19b , #00d1bd ); */
-    background: transparent;
+    /*background: transparent;
     display: inline;
     margin-left: -35px;
+    margin-top: 50px;
+    width:60%;
+    height: 50px;*/
   }
-
+  #searchIcon{
+    top: -26px;
+    right: 8px;
+  }
 #searchbox{
   margin-left: auto;
   margin-right: auto;
@@ -306,7 +314,7 @@ hr { margin:1px}
 
 
 #results {
-  margin-top:50px;
+   margin-top:50px;
 }
 
 #signupBtn {
@@ -381,4 +389,8 @@ hr { margin:1px}
   float: right;
   position: relative;
 
+}
+
+#search-form {
+  position: relative;
 }
