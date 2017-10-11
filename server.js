@@ -109,7 +109,7 @@ require("./routes/user-api-routes.js")(app);
 
 
 
-db.sequelize.sync({ force: false }).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
 
 });
 
