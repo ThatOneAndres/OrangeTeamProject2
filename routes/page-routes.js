@@ -4,7 +4,7 @@ module.exports = function(app){
     res.render('index');
   });
 
-  app.get('/recipeSearch', function(req, res){
+  app.get('/recipeSearch/:ingredients?', function(req, res){
     res.render('recipesearch');
   });
 

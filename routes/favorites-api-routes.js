@@ -16,7 +16,7 @@ module.exports = function(app) {
   app.post("/api/favorites", function(req, res) {
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.favorites.create({
-      username: req.body.username,
+      userid: req.body.id,
       item: req.body.item,
       image_url: req.body.image_url,
       recipe_url: req.body.recipe_url
@@ -26,11 +26,11 @@ module.exports = function(app) {
   });
 
   // Validates if user auth is valid
-  app.get("/api/favorites/:username", function(req, res) {
+  app.get("/api/favorites/:userid", function(req, res) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.favorites.findAll({where: {
-      username: req.params.username,
+      userid: req.params.userid,
     }}).then((result) => {
       if (result.length === 0) {
         res.send("NO Favorites")

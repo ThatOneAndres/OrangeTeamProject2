@@ -69,5 +69,6 @@ module.exports = function(app){
         }catch (err){
             res.send(err);
         }
-    })
+    });
+
 }

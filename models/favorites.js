@@ -3,7 +3,7 @@
 
 module.exports = function (sequelize, DataTypes) {
 	var favorites = sequelize.define("favorites", {
-		username: {
+		userid: {
 			type: DataTypes.STRING,
       		allowNull: false,
       		validate: {
