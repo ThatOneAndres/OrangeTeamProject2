@@ -1049,11 +1049,38 @@ hr { margin:1px}
   resize: none;
   }
 
-.recipeform{
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  background-color: black;
+#recipeForm{
+  border: 5px black solid;
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 8px #000;
+          box-shadow: 1px 3px 8px #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+
+}
+
+.hr {
+  border: .5px black solid;
+  opacity: .5;
+  background-color: white;
+  -webkit-box-shadow: 1px 3px 8px #000;
+          box-shadow: 1px 3px 8px #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#dashboardContainer{
+  background-image: url("/assets/img/prep.jpg");
+  position: relative;
+  background-size: cover;
+  z-index: -10;
+  background-position: center center;
+  /*width:100%;*/
+  height: 100%;
 }
 
 html {
