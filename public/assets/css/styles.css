@@ -78,13 +78,13 @@
   color:#000;
 }
 
-/* .features-clean .item {
+.features-clean .item {
   font-size:20px;
   font-weight:bold;
   margin-top:0;
   margin-bottom:20px;
   color:inherit;
-} */
+}
 
 .login-dark {
   height:800px;
@@ -777,11 +777,11 @@
 
 .ontop{
     font-size: 36px;
-    color: white;
+    color: #fff;
     text-align: center;
-    display: inline block;
-    background:#141414;
-    border-radius: 50px;
+    /* display: inline block; */
+    background:#000;
+    border-radius: 50%;
     padding-top:20px;
     width:80px;
     height:80px;
@@ -804,7 +804,7 @@
     font-weight:bold;
     margin-bottom:40px;
     padding-top:40px;
-    color:#141414;
+    color:#000;
     text-align: center;
     font-size: 40px;
   }
@@ -1316,3 +1316,4 @@ body{
     font-size: 25px;
     font-weight: bold;
 }
+
