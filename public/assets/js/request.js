@@ -113,6 +113,16 @@ $(document).ready(function(){
         };
         var searchedRecipe = $("#searchRecipe").val();
 
+        $.get("api/user").done(function(result){
+          if (typeof result === "object"){
+            var obj = {
+              userId: result.user,
+              foods: searchedRecipe
+            }
+            $.post("/api/history",obj,function(){});
+          }
+        });
+
 
         console.log(searchedRecipe);
        foods.foods = searchedRecipe.split(" ");
@@ -226,7 +236,8 @@ $(document).ready(function(){
     // var data = ["chicken, bread","pork, eggs","butter,ham,egg"]
     $.get("api/user").done(function(result){
       if (typeof result === "object"){
-          $.get("/api/history/:username",function(data){
+          $.get("/api/history/" + result.user,function(data){
+            console.log(data);
             if (typeof data === "object"){
               var searchHistory = $("<a/>");
               searchHistory.attr("href","#history");
@@ -235,7 +246,7 @@ $(document).ready(function(){
               var searchList = $("<div class='collapse' id='history'/>");
               for (let i = 0; i < data.length; i++){
                   var search = $("<div/>");
-                  var anch = $("<a class='search-history'/>").text(data[i]);
+                  var anch = $("<a class='search-history'/>").text(data[i].item);
                   anch.attr("href","#");
                   search.append(anch);
                   searchList.append(search)

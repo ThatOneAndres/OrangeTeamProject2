@@ -92,7 +92,7 @@ app.set("view engine", "handlebars");
 //add login route
 // Routes
 // =============================================================
-require("./routes/login-api-route.js")(app);
+require("./routes/login-routes")(app);
 
 require("./routes/favorites-api-routes.js")(app);
 
@@ -104,14 +104,12 @@ require("./routes/api-registration")(app);
 
 require("./routes/page-routes")(app);
 
-require("./routes/login-routes")(app);
-
 require("./routes/user-api-routes.js")(app);
 
 
 
 
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
 
 });
 
