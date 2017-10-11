@@ -61,14 +61,14 @@
         <div class="form-group">
           <label for="ingridents">Ingridents</label>
           <input class="form-control textarea" id="ingridents" type="textarea" />
-          <button class="btn" type="submit">Add</button>
+          <button class="btn card-btn" type="submit">Add</button>
         </div>
         <div class="form-group">
           <label for="direction">Cooking Step</label>
           <input class="form-control textarea" id="cooking-step" type="textarea" />
-          <button class="btn" type="submit">Add</button>
+          <button class="btn card-btn" type="submit">Add</button>
         </div>
-        <div class="form-group">
+        {{!-- <div class="form-group">
           <label for="cooktime">Cook Time(Optional)</label>
           <textarea class="form-control" id="cooktime" placeholder="Cook Time"></textarea>
         </div>
@@ -79,17 +79,42 @@
         <div class="form-group">
           <label for="serving">Serving Size (Optional)</label>
           <textarea class="form-control" id="serving" placeholder="Serving Size"></textarea>
-        </div>
-        <label class="custom-file">
-                      Image (Optional)
-                      <input type="file" id="file" class="custom-file-input">
-                      <span class="custom-file-control"></span>
-                      </label>
+        </div> --}}
       </form>
     </div>
 
-    <div class="col-md-6" id = "history-form">
+    <div id="searchBox"class="col-md-4">
+      <form method="post">
+        <h2 class="text-center"><strong>Recipe Form</strong></h2>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="name" placeholder="Recipe Title">
+        </div>
+        <div class="form-group">
+          <label for="ingridents">Ingridents</label>
+          <input class="form-control textarea" id="ingridents" type="textarea" />
+          <button class="btn card-btn" type="submit">Add</button>
+        </div>
+        <div class="form-group">
+          <label for="direction">Cooking Step</label>
+          <input class="form-control textarea" id="cooking-step" type="textarea" />
+          <button class="btn card-btn" type="submit">Add</button>
+        </div>
+        {{!-- <div class="form-group">
+          <label for="cooktime">Cook Time(Optional)</label>
+          <textarea class="form-control" id="cooktime" placeholder="Cook Time"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="diet">Dietary(Optional)</label>
+          <textarea class="form-control" id="diet" placeholder="Keto"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="serving">Serving Size (Optional)</label>
+          <textarea class="form-control" id="serving" placeholder="Serving Size"></textarea>
+        </div> --}}
+      </form>
     </div>
+
 
   </div>
 
