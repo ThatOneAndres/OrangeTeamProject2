@@ -106,10 +106,12 @@ require("./routes/page-routes")(app);
 
 require("./routes/login-routes")(app);
 
+require("./routes/user-api-routes.js")(app);
 
 
 
-db.sequelize.sync({ force: true }).then(function() {
+
+db.sequelize.sync({ force: false }).then(function() {
 
 });
 

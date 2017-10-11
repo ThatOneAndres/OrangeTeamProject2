@@ -111,7 +111,8 @@ $(document).ready(function(){
           recipeCount: 10,
           calories: 1000
         };
-        var searchedRecipe = $("#searchRecipe").val()
+        var searchedRecipe = $("#searchRecipe").val();
+
 
         console.log(searchedRecipe);
        foods.foods = searchedRecipe.split(" ");
@@ -223,34 +224,36 @@ $(document).ready(function(){
     });
     // To test comment out lines 227,228 and uncomment line 225
     // var data = ["chicken, bread","pork, eggs","butter,ham,egg"]
+    $.get("api/user").done(function(result){
+      if (typeof result === "object"){
+          $.get("/api/history/:username",function(data){
+            if (typeof data === "object"){
+              var searchHistory = $("<a/>");
+              searchHistory.attr("href","#history");
+              searchHistory.attr("data-toggle", "collapse");
+              searchHistory.text("Search History");
+              var searchList = $("<div class='collapse' id='history'/>");
+              for (let i = 0; i < data.length; i++){
+                  var search = $("<div/>");
+                  var anch = $("<a class='search-history'/>").text(data[i]);
+                  anch.attr("href","#");
+                  search.append(anch);
+                  searchList.append(search)
+              }
 
-    if (isAuthenticated){
-        $.get("/api/history/:username",function(data){
-          var searchHistory = $("<a/>");
-          searchHistory.attr("href","#history");
-          searchHistory.attr("data-toggle", "collapse");
-          searchHistory.text("Search History");
-          var searchList = $("<div class='collapse' id='history'/>");
-          for (let i = 0; i < data.length; i++){
-              var search = $("<div/>");
-              var anch = $("<a class='search-history'/>").text(data[i]);
-              anch.attr("href","#");
-              search.append(anch);
-              searchList.append(search)
+              $(".search-form").after(searchList);
+              $(".search-form").after(searchHistory);
           }
-
-          $(".search-form").after(searchList);
-          $(".search-form").after(searchHistory);
-
-      });
-  }
+        });
+      }
+    });
 
   $(".search-history").click(function(){
     event.preventDefault();
     var ingredients = $(this).text();
     console.log(ingredients);
     var food = {
-      foods: ingredients.split(",")
+      foods: ingredients.split(" ")
     }
     $.post("api/recipesearch/",food)
     .done(displayRecipes);
