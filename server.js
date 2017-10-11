@@ -14,6 +14,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var MySQLStore = require('express-mysql-session')(session);
 
+require('dotenv').config();
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -27,12 +28,22 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(expressValidator());//this line must be after bodyparser middleware
 app.use(cookieParser());
 
-var options = {
-  host: 'localhost',
-  user: 'root',
-  password:'root',
-  database: 'resourcefoods_db'
-};
+if(process.env.JAWSDB_URL){
+  var options = {
+    host: 'i943okdfa47xqzpy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'pz4n6vtw1csjiuh4',
+    password:'ttdow9z6shys9mqb',
+    database: 'ggp9cyafuzujlxtq'
+  }
+} else {
+
+  var options = {
+    host: 'localhost',
+    user: 'root',
+    password:'root',
+    database: 'resourcefoods_db'
+  };
+}
 
 var sessionStore = new MySQLStore(options);
 
