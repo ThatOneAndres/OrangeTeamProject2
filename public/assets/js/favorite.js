@@ -1,9 +1,14 @@
 var generateFavs = function(result) {
+    // console.log(result)
   $("#favorites").empty();
 
+  // console.log(result);
   for(var i = 0; i < 4; i++){
+
     //Define recipe Item with props
     var recipeItem = result[i];
+    // console.log(recipeItem);
+    // console.log(typeof(JSON.parse(recipeItem)))
     //Define Jquery Dom elements
     var favButton = $("<a>")
     var colDiv = $("<div>");
@@ -52,7 +57,7 @@ var generateFavs = function(result) {
     })
 
     console.log(recipeItem.dietLabels);
-    dietLabels.text("Diet Labels : " + recipeItem.dietLabels.toString());
+    dietLabels.text("Diet Labels : " + recipeItem.dietLabels);
 
     fullRecipe.attr({
     href: recipeItem.url,
@@ -103,15 +108,20 @@ var myFavs = [
     dietLabels: "Low-Carb",
     url: "http://norecipes.com/blog/2008/12/14/chicken-fried-steak-with-country-gravy/"
   }
-]
+];
 
 $(document).ready(function(){
   $.get("api/user").done(function(result) {
+    console.log(result);
+    typeof(result);
     if (result) {
-      $.get("/api/history/" + result.user, function(result){
-        if(result ==== "NO Favorites" || result.length < 5){
+      $.get("/api/favorites/" + result.user, function(result){
+        console.log(result)
+        if(result === "NO Favorites" || result.length < 5){
+            console.log("we are in no favs ")
           generateFavs(myFavs);
         } else {
+            console.log("we are in there are favs")
           generateFavs(result);
         }
       })

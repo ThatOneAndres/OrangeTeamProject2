@@ -8,7 +8,7 @@ function displayRecipes(result){
                for(var i = 0; i < result.length; i++){
                 //Define recipe Item with props
                 var recipeItem = result[i].recipe;
-  
+              
                 //Define Jquery Dom elements
                 var favButton = $("<a>")
                 var colDiv = $("<div>");
@@ -32,7 +32,10 @@ function displayRecipes(result){
                 cardDiv.attr({
                   class: "card recipeCard",
                 });
-  
+  // <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+
+
                 img.attr({
                   src: recipeItem.image,
                   alt: recipeItem.label,
@@ -75,6 +78,7 @@ function displayRecipes(result){
                 cardBlock.append(dietLabels);
                 cardBlock.append($("<hr>"));
                 cardBlock.append(fullRecipe);
+
   
   
                 cardDiv.append(cardBlock)
@@ -84,6 +88,18 @@ function displayRecipes(result){
   
             };
 
+function myFavorite() {
+  var hearted = $(this);
+
+  if (hearted.hasClass("glyphicon-heart-empty")) {
+    hearted.removeClass("glyphicon-heart-empty");
+    hearted.addClass("glyphicon-heart")  
+  } else if (hearted.hasClass("glyphicon-heart")) {
+    hearted.removeClass("glyphicon-heart");
+    hearted.addClass("glyphicon-heart-empty") 
+  }
+
+}
 $(document).ready(function(){
     $("#searchRecipeButton").click(function(){
       event.preventDefault();
@@ -132,10 +148,15 @@ $(document).ready(function(){
               var img = $("<img>");
               var dietLabels = $("<p>");
               var fullRecipe = $("<a>");
+              var myFav = $("<span>")
+              var favButton = $("<button>")
 
               //Add attributes to elements
               favButton.attr({
-                name: recipeItem.label,
+                label: recipeItem.label,
+                dietLabels: recipeItem.dietLabels,
+                image: recipeItem.image,
+                url: recipeItem.url,
                 class: "favButton",
               });
 
@@ -179,6 +200,13 @@ $(document).ready(function(){
                 target: "_blank"
               });
 
+              myFav.attr({
+                class: "glyphicon glyphicon-heart-empty",
+                name: recipeItem.label
+
+              });
+
+
               fullRecipe.text("Full Recipe")
 
               colDiv.append(cardDiv);
@@ -189,7 +217,9 @@ $(document).ready(function(){
               cardBlock.append(dietLabels);
               cardBlock.append($("<hr>"));
               cardBlock.append(fullRecipe);
-
+              cardBlock.append($("<hr>"));
+              cardBlock.append(myFav);
+              // cardBlock.append(myFav);
 
               cardDiv.append(cardBlock)
 
@@ -228,6 +258,7 @@ $(document).ready(function(){
         });
       }
     });
+    $(document).on("click", ".glyphicon", myFavorite)
 
   $(".search-history").click(function(){
     event.preventDefault();
