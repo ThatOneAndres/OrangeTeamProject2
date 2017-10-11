@@ -777,12 +777,14 @@
 
 .ontop{
     font-size: 36px;
-    color: white;
+    color: #fff;
     text-align: center;
-    display: inline block;
-    background:#141414;
-    border-radius: 50px;
+    /* display: inline block; */
+    background:#000;
+    border-radius: 50%;
     padding-top:20px;
+    width: 80px;
+    height: 80px;
 
   }
 
@@ -802,7 +804,7 @@
     font-weight:bold;
     margin-bottom:40px;
     padding-top:40px;
-    color:#141414;
+    color:#000;
     text-align: center;
     font-size: 40px;
   }
