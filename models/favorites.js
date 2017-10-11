@@ -10,21 +10,28 @@ module.exports = function (sequelize, DataTypes) {
         		len: [1]
       		}
 		},
-		item: {
+		label: {
 			type: DataTypes.STRING,
       		allowNull: false,
       		validate: {
         		len: [1]
       		}
 		},
-		image_url: {
+		dietLabels: {
 			type: DataTypes.STRING,
       		allowNull: false,
       		validate: {
         		len: [1]
       		}
 		},
-		recipe_url: {
+		url: {
+			type: DataTypes.STRING,
+      		allowNull: false,
+      		validate: {
+        		len: [1]
+      		}
+		},
+		image: {
 			type: DataTypes.STRING,
       		allowNull: false,
       		validate: {
