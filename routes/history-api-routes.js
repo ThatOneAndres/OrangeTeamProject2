@@ -17,7 +17,7 @@ module.exports = function(app) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
     db.history.findAll({where: {
-      username: req.params.username,
+      usertwoId: req.params.username,
     }}).then((result) => {
       if (result.length === 0) {
         res.send("No History available for user")
@@ -26,4 +26,13 @@ module.exports = function(app) {
       }
     })
   });
+
+  app.post("/api/history", function(req,res){
+    db.history.create({
+      usertwoId: req.body.userId,
+      item: req.body.foods,
+    }).then((result) => {
+      console.log(result);
+    });
+  })
 }

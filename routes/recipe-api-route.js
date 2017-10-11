@@ -52,7 +52,7 @@ module.exports = function(app){
         try{
             var queryUrl = constructURL(req.body);
             db.history.create({
-                username: req.body.username,
+                usertwoid: req.body.userId,
                 item: req.body.foods.toString(),
               }).then((result) => {
                 console.log(result);
