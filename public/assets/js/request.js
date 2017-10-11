@@ -245,8 +245,11 @@ $(document).ready(function(){
               searchHistory.text("Search History");
               var searchList = $("<div class='collapse' id='history'/>");
               for (let i = 0; i < data.length; i++){
+                  if (i > 4){
+                    break;
+                  }
                   var search = $("<div/>");
-                  var anch = $("<a class='search-history'/>").text(data[i].item);
+                  var anch = $("<a class='search-history'/>").text(data[data.length-1-i].item);
                   anch.attr("href","#");
                   search.append(anch);
                   searchList.append(search)
