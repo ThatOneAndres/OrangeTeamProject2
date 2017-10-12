@@ -1,9 +1,9 @@
 .login-dark {
   height:802px;
-  background:#475d62 url(../../assets/img/kitchen.jpg);
+  background: url(../../assets/img/prep.jpg) no-repeat left;
   background-size:cover;
-  position:relative;
-  margin-bottom:-20px;
+  border:none;
+  background-attachment: fixed;
 }
 
 .login-dark form {
