@@ -14,28 +14,56 @@ module.exports = function(app) {
 
   // Registers new user into DataBase
   app.post("/api/favorites", function(req, res) {
+
+    console.log(req.body.label);
+    console.log(typeof(req.session.passport.user.toString()))
+    // console.log(typeof(req.session.passport.user.toString();
+    console.log(req.body.dietLabels)
+    console.log(req.body.url)
+    console.log(req.body.image)
+
     // Add sequelize code to find all posts, and return them to the user with res.json
     db.favorites.create({
-      userid: req.body.id,
-      item: req.body.item,
-      image_url: req.body.image_url,
-      recipe_url: req.body.recipe_url
+      userid: req.session.passport.user.toString(),
+      label: req.body.label,
+      dietLabels: req.body.dietLabels,
+      url: req.body.url,
+      image: req.body.image,
     }).then((result) => {
-      res.json(result);
-    })
+      console.log("THiS DID NOT WORK!")
+      console.log(result);
+    });
   });
 
+
   // Validates if user auth is valid
-  app.get("/api/favorites/:userid", function(req, res) {
+  app.get("/favorites/", function(req, res) {
     // Add sequelize code for creating a post using req.body,
     // then return the result using res.json
+
+    console.log(req.session.passport.user)
     db.favorites.findAll({where: {
-      userid: req.params.userid,
+      userid: req.session.passport.user,
     }}).then((result) => {
       if (result.length === 0) {
         res.send("NO Favorites")
       } else {
-        res.json(result);
+        var resultArray = [];
+
+        console.log(typeof(resultArray))
+
+        result.forEach((val, index) => {
+
+          var myObj = {
+            label: val.label,
+            dietLabels: val.dietLabels,
+            url: val.url,
+            image: val.image,
+          }
+          resultArray.push(myObj);
+        })
+
+        res.render("favorites", {favorites: resultArray});
       }
     })
   });
