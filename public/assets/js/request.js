@@ -105,6 +105,14 @@ function displayRecipes(result){
 // }
 
 $(document).ready(function(){
+
+    $('#searchRecipe').keypress(function(e){
+  
+        if(e.which == 13){//Enter key pressed
+            $('#searchRecipeButton').click();//Trigger search button click event
+        }
+    });
+
     $("#searchRecipeButton").click(function(){
       event.preventDefault();
 
@@ -227,7 +235,7 @@ $(document).ready(function(){
                 class: "btn btn-primary card-btn",
                 target: "_blank"
               });
-              // 
+              //
               // myFav.attr({
               //   class: "glyphicon glyphicon-heart-empty",
               //   name: recipeItem.label

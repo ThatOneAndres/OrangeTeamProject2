@@ -105,6 +105,14 @@ function myFavorite() {
 }
 
 $(document).ready(function(){
+
+    $('#searchRecipe').keypress(function(e){
+        if(e.which == 13){//Enter key pressed
+    
+            $('#searchRecipeButton').click();//Trigger search button click event
+        }
+    });
+
     $("#searchRecipeButton").click(function(){
       event.preventDefault();
 
