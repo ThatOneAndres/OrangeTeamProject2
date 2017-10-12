@@ -46,6 +46,7 @@
 #myFooter .myColsrow{
   background-color: #373a48;
   width: 100%;
+  margin-top: -20px;
 }
 
 #myFooter .social-networks{
