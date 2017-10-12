@@ -189,7 +189,7 @@ $(document).ready(function(){
               });
 
               colDiv.attr({
-                class: "col-md-4 col-sm-6 animated slideInBottom",
+                class: "col-md-4 col-sm-6",
               });
 
               cardDiv.attr({
@@ -286,6 +286,7 @@ $(document).ready(function(){
         });
       }
     });
+
     $(document).on("click", ".glyphicon", myFavorite)
 
   $(".search-history").click(function(){

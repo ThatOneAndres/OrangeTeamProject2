@@ -408,7 +408,7 @@ hr { margin:1px}
   background-image: url("/assets/img/prep.jpg");
   position: relative;
   background-size: cover;
-  z-index: -10;
+  /*z-index: -10;*/
   background-position: center center;
   /*width:100%;*/
   min-height: 1100px;
