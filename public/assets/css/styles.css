@@ -719,6 +719,9 @@
     height: 300px;
     width: 600px;
     border-radius: 5px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration:2s;
+
   }
 
 /*.hero::after {
@@ -971,6 +974,7 @@ body{
   border-radius: 5px;
   margin-bottom: 10px;
   background: #fff;
+  height: 537px;
 }
 
 .card:focus, .card:hover {
@@ -1379,4 +1383,11 @@ body {
 #myDiv {
   display: none;
   text-align: center;
+}
+
+.box {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: 300px auto 0 auto;
 }
