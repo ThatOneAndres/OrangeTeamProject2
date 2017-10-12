@@ -413,3 +413,7 @@ hr { margin:1px}
   /*width:100%;*/
   min-height: 1100px;
 }
+
+.headerContainer {
+  padding-top: 30px;
+}

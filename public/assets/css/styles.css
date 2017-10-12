@@ -1119,6 +1119,10 @@ hr { margin:1px}
   min-height: 1100px;
 }
 
+.headerContainer {
+  padding-top: 30px;
+}
+
 html {
   position: relative;
   min-height: 100%;
