@@ -39,7 +39,7 @@ module.exports = function(app) {
     req.checkBody('passwordMatch', 'Passwords do not match, please try again.').equals(req.body.password);
 
     // Additional validation to ensure username is alphanumeric with underscores and dashes
-    req.checkBody('name', 'Name can only contain letters, numbers, or underscores.').matches(/^[A-Za-z0-9_-]+$/, 'i');
+    // req.checkBody('name', 'Name can only contain letters, numbers, or underscores.').matches(/^[A-Za-z0-9_-]+$/, 'i');
 
     var errors = req.validationErrors();
 
