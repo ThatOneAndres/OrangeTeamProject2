@@ -93,6 +93,8 @@ function displayRecipes(result){
 
 function myFavorite() {
   var hearted = $(this);
+  console.log("We are in favorites!")
+
 
   if (hearted.hasClass("glyphicon-heart-empty")) {
     hearted.removeClass("glyphicon-heart-empty");
@@ -102,7 +104,24 @@ function myFavorite() {
     hearted.addClass("glyphicon-heart-empty")
   }
 
-}
+  console.log(hearted.attr("label"))
+
+  var foods = {
+      label: hearted.attr("label"),
+      image: hearted.attr("image"),
+      url: hearted.attr("url"),
+      dietLabels: hearted.attr("dietLabels"),
+  };
+
+  console.log(foods)
+
+  $.post("/api/favorites", foods)
+  .done(function(result){
+    console.log(result);
+  });
+
+
+};
 
 $(document).ready(function(){
 
@@ -238,8 +257,10 @@ $(document).ready(function(){
 
               myFav.attr({
                 class: "glyphicon glyphicon-heart-empty",
-                name: recipeItem.label
-
+                label: recipeItem.label,
+                dietLabels: recipeItem.dietLabels,
+                image: recipeItem.image,
+                url: recipeItem.url,
               });
 
 

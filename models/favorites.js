@@ -5,10 +5,6 @@ module.exports = function (sequelize, DataTypes) {
 	var favorites = sequelize.define("favorites", {
 		userid: {
 			type: DataTypes.STRING,
-      		allowNull: false,
-      		validate: {
-        		len: [1]
-      		}
 		},
 		label: {
 			type: DataTypes.STRING,
@@ -40,14 +36,14 @@ module.exports = function (sequelize, DataTypes) {
 		}
 	});
 
-	favorites.associate = function(models) {
-		// We're saying that a favorites should belong to an Author
-		// A favorites can't be created without an Author due to the foreign key constraint
-			favorites.belongsTo(models.usertwos, {
-				foreignKey: {
-					allowNull: false
-				}
-			});
-	};
+	// favorites.associate = function(models) {
+	// 	// We're saying that a favorites should belong to an Author
+	// 	// A favorites can't be created without an Author due to the foreign key constraint
+	// 		favorites.belongsTo(models.usertwos, {
+	// 			foreignKey: {
+	// 				allowNull: false
+	// 			}
+	// 		});
+	// };
 	return favorites;
 }
