@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h2 id="favtitle">My Favorite Recipes</h2>
+  <h2 class="textStyle">My Favorite Recipes</h2>
 
   <hr class="hr"/>
 
@@ -53,7 +53,7 @@
 
     <div id="recipeForm"class="col-md-6">
       <form method="post">
-        <h2 class="text-center"><strong>Recipe Form</strong></h2>
+        <h2 class="textStyle">Recipe Form</h2>
         <div class="form-group">
           <label for="title">Title</label>
           <input type="text" class="form-control" id="name" placeholder="Recipe Title">
@@ -61,12 +61,15 @@
         <div class="form-group">
           <label for="ingridents">Ingridents</label>
           <input class="form-control textarea" id="ingridents" type="textarea" />
-          <button class="btn card-btn" type="submit">Add</button>
+          <button class="btn btn-primary card-btn" type="submit">Add</button>
         </div>
         <div class="form-group">
           <label for="direction">Cooking Step</label>
           <input class="form-control textarea" id="cooking-step" type="textarea" />
-          <button class="btn card-btn" type="submit">Add</button>
+          <button class="btn btn-primary card-btn" type="submit">Add</button>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btnForm"type="submit">SUBMIT</button>
         </div>
         {{!-- <div class="form-group">
           <label for="cooktime">Cook Time(Optional)</label>
@@ -84,35 +87,15 @@
     </div>
 
     <div id="searchBox"class="col-md-4">
-      <form method="post">
-        <h2 class="text-center"><strong>Recipe Form</strong></h2>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="name" placeholder="Recipe Title">
-        </div>
-        <div class="form-group">
-          <label for="ingridents">Ingridents</label>
-          <input class="form-control textarea" id="ingridents" type="textarea" />
-          <button class="btn card-btn" type="submit">Add</button>
-        </div>
-        <div class="form-group">
-          <label for="direction">Cooking Step</label>
-          <input class="form-control textarea" id="cooking-step" type="textarea" />
-          <button class="btn card-btn" type="submit">Add</button>
-        </div>
-        {{!-- <div class="form-group">
-          <label for="cooktime">Cook Time(Optional)</label>
-          <textarea class="form-control" id="cooktime" placeholder="Cook Time"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="diet">Dietary(Optional)</label>
-          <textarea class="form-control" id="diet" placeholder="Keto"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="serving">Serving Size (Optional)</label>
-          <textarea class="form-control" id="serving" placeholder="Serving Size"></textarea>
-        </div> --}}
-      </form>
+      <h2 class="textStyle">Recent Searches</h2>
+      <ol class="recentSearch">
+        <li>Steak and Eggs</li>
+        <li>Chicken Noodle Soup</li>
+        <li>Spaghetti and Meatballs</li>
+        <li>Meatballs</li>
+        <li>Chocolate Cake</li>
+      </ol>
+
     </div>
 
 
