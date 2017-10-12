@@ -48,7 +48,7 @@ module.exports = function(app) {
       if (result.length === 0) {
         res.send("NO Favorites")
       } else {
-
+        var resultArray = [];
 
         console.log(typeof(resultArray))
 
