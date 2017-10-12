@@ -90,19 +90,19 @@ function displayRecipes(result){
 
 // loader function
 
-//
-// function myFavorite() {
-//   var hearted = $(this);
-//
-//   if (hearted.hasClass("glyphicon-heart-empty")) {
-//     hearted.removeClass("glyphicon-heart-empty");
-//     hearted.addClass("glyphicon-heart")
-//   } else if (hearted.hasClass("glyphicon-heart")) {
-//     hearted.removeClass("glyphicon-heart");
-//     hearted.addClass("glyphicon-heart-empty")
-//   }
-//
-// }
+
+function myFavorite() {
+  var hearted = $(this);
+
+  if (hearted.hasClass("glyphicon-heart-empty")) {
+    hearted.removeClass("glyphicon-heart-empty");
+    hearted.addClass("glyphicon-heart")
+  } else if (hearted.hasClass("glyphicon-heart")) {
+    hearted.removeClass("glyphicon-heart");
+    hearted.addClass("glyphicon-heart-empty")
+  }
+
+}
 
 $(document).ready(function(){
     $("#searchRecipeButton").click(function(){
@@ -227,12 +227,12 @@ $(document).ready(function(){
                 class: "btn btn-primary card-btn",
                 target: "_blank"
               });
-              // 
-              // myFav.attr({
-              //   class: "glyphicon glyphicon-heart-empty",
-              //   name: recipeItem.label
-              //
-              // });
+
+              myFav.attr({
+                class: "glyphicon glyphicon-heart-empty",
+                name: recipeItem.label
+
+              });
 
 
               fullRecipe.text("Full Recipe")
@@ -287,7 +287,7 @@ $(document).ready(function(){
       }
     });
 
-    // $(document).on("click", ".glyphicon", myFavorite)
+    $(document).on("click", ".glyphicon", myFavorite)
 
   $(".search-history").click(function(){
     event.preventDefault();
