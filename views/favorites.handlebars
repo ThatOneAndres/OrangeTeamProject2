@@ -1,6 +1,6 @@
-{{> navbar}}
+{{> navbarsearch}}
 
-<div class="row">
+{{!-- <div class="row">
 <div class="col-md-3 col-sm-6">
       <div class="card recipeCard"><img src="https://www.edamam.com/web-img/b76/b76a48e89abc9d8dc83c0fd011a30e7a.jpg" alt="Steak &amp; Eggs Rancheros" class="card-img-top">
         <hr>
@@ -41,4 +41,9 @@
           <hr><a href="http://norecipes.com/blog/2008/12/14/chicken-fried-steak-with-country-gravy/" class="btn btn-primary card-btn" target="_blank">Full Recipe</a></div>
       </div>
     </div>
+</div> --}}
+<div class="recipeContainer">
+  {{>favorites this}}
 </div>
+
+{{> footer}}
